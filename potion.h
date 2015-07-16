@@ -8,6 +8,7 @@
 #define POTION_H
 
 #include "main.h"
+#include <iostream>
 
 class Potion {
     private:
@@ -15,19 +16,25 @@ class Potion {
 
     public:
         Potion(PotionType type = UNKNOWN);
-        PotionType GetType();
+	Potion(const Potion& originalPotion);
+	Potion& operator =(const Potion& originalPotion);
+        PotionType GetType() const;
+	friend std::ostream& operator <<(std::ostream& out, const Potion& pt);
 };
 
 class PotionNode {
     private:
         Potion _potion;
-        Potion _*nextPotion;
+        PotionNode *_nextPotion;
 
     public:
         PotionNode();
-        Potion& getPotion();
-        Potion* getNext();
-        void setPotion(Potion newPotion);
+	PotionNode(const PotionNode& originalNode);
+	PotionNode& operator =(const PotionNode& originalNode);
+        const Potion& getPotion() const;
+        PotionNode* getNext();
+        void setPotion(const Potion& newPotion);
+	void setNext(PotionNode* newNode);
 };
 
 #endif

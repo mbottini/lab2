@@ -4,16 +4,21 @@
 // July 8, 2015
 // Apothecary header file for apothecary program.
 
+#include "potion.h"
+#include "potionqueue.h"
+#include "potionstack.h"
+
 class Apothecary {
     private:
-        PotionNode *_orderQueueHead;
-        PotionNode *_potionStackHead;
+	PotionQueue _orderQueue;
+	PotionStack _potionStack;
         int _maxQueueSize;
         int _maxStackSize;
-        int _orderQueueSize;
-        int _potionStackSize;
 
     public:
         Apothecary(int maxQueue, int maxStack);
-        ~Apothecary();
+	bool OrderPotion(PotionType potion);
+	int MakePotions();
+	bool BuyPotion(Potion& potion);
+};
 

@@ -4,7 +4,7 @@
 #ifdef _WIN32
 #define _CRTDBG_MAP_ALLOC
 #include <stdlib.h>
-#include <crtdbg.h>
+//#include <crtdbg.h>
 #endif
 
 using namespace std;
@@ -125,12 +125,12 @@ void TestApothecary()
 int main() {
 
 	TestApothecary();
-
+/*
 #ifdef _WIN32
 	if (_CrtDumpMemoryLeaks()) {
 		cout << "Memory leaks!" << endl;
 	}
 #endif
-
+*/
 	return 0;
 }
