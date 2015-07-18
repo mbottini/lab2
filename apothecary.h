@@ -10,8 +10,8 @@
 
 class Apothecary {
     private:
-	PotionQueue _orderQueue;
-	PotionStack _potionStack;
+	PotionStructure _orderQueue;
+	PotionStructure _potionStack;
         int _maxQueueSize;
         int _maxStackSize;
 
