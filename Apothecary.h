@@ -2,11 +2,11 @@
 // Michael Bottini
 // Created for CS260
 // July 8, 2015
-// Apothecary header file for apothecary program.
+// Apothecary header file for apothecary program. Named "Apothecary.h"
+// because the provided main program capitalizes it.
 
 #include "potion.h"
-#include "potionqueue.h"
-#include "potionstack.h"
+#include "potionstructure.h"
 
 class Apothecary {
     private:

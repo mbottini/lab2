@@ -99,7 +99,7 @@ Potion PotionStructure::popFront() {
     return poppedPotion;
 }
 
-void PotionStructure::pushBack(const Potion& newPotion) {
+void PotionStructure::enqueue(const Potion& newPotion) {
     PotionNode *newNode = new PotionNode;
     if(newNode) {
         newNode->setPotion(newPotion);

@@ -7,8 +7,6 @@
 #include "potion.h"
 #include "main.h"
 
-#define NULL 0
-
 Potion::Potion(PotionType type) {
     _type = type;
     return;

@@ -23,7 +23,7 @@ class PotionStructure {
 	PotionStructure& operator =(const PotionStructure& originalStructure);
 	PotionNode* getFront() const;
 	PotionNode* getBack() const;
-	void pushBack(const Potion& newPotion);
+	void enqueue(const Potion& newPotion);
 	void pushFront(const Potion& newPotion);
 	Potion popFront();
 	void printAll();

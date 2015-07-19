@@ -4,7 +4,7 @@
 // July 15, 2015
 // Implementation file for apothecary class.
 
-#include "apothecary.h"
+#include "Apothecary.h"
 
 Apothecary::Apothecary(int maxQueue, int maxStack) {
     _maxQueueSize = maxQueue;
@@ -16,7 +16,7 @@ bool Apothecary::OrderPotion(PotionType potion) {
     Potion newPotion(potion);
     bool addedPotion = false;
     if(_orderQueue.getSize() < _maxQueueSize) {
-        _orderQueue.pushBack(newPotion);
+        _orderQueue.enqueue(newPotion);
 	addedPotion = true;
     }
 
